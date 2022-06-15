@@ -13,3 +13,9 @@ Salarios::~Salarios()
     delete ui;
 }
 
+
+void Salarios::on_btnCalcular_clicked()
+{
+
+}
+
