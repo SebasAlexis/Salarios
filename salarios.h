@@ -1,7 +1,13 @@
 #ifndef SALARIOS_H
 #define SALARIOS_H
 
+#include "obrero.h"
+#include "controlador.h"
+
 #include <QMainWindow>
+#include <QDebug>
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Salarios; }
