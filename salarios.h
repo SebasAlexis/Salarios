@@ -6,7 +6,7 @@
 
 #include <QMainWindow>
 #include <QDebug>
-
+#include <QMessageBox>
 
 
 QT_BEGIN_NAMESPACE
@@ -26,5 +26,6 @@ private slots:
 
 private:
     Ui::Salarios *ui;
+    Controlador *m_controlador;
 };
 #endif // SALARIOS_H
