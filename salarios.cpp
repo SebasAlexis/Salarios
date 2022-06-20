@@ -18,6 +18,29 @@ Salarios::~Salarios()
 
 void Salarios::on_btnCalcular_clicked()
 {
+    calcular();
+}
+
+void Salarios::on_actionNuevo_triggered()
+{
+    //Limpiar widgets
+    limpiar();
+    //Limpiar el texto de los calculos
+    ui->outCalculos->clear();
+    ui->statusbar->showMessage("Nuevo Archivo",5000);
+}
+
+void Salarios::limpiar()
+{
+    //Limpiar widgets
+    ui->inNombre->setText("");
+    ui->inHoras->setValue(0);
+    ui->inMatutina->setChecked(true);
+    ui->inNombre->setFocus();
+}
+
+void Salarios::calcular()
+{
     //Obtener datos de la GUI
     QString nombre=ui->inNombre->text();
     int horas=ui->inHoras->value();
@@ -47,14 +70,50 @@ void Salarios::on_btnCalcular_clicked()
                     "Error",
                     "No se puede calcular el salario.");
     }
-    //Limpiar widgets
-    ui->inNombre->setText("");
-    ui->inHoras->setValue(0);
-    ui->inMatutina->setChecked(true);
-    ui->inNombre->setFocus();
 
+    limpiar();
     //Mostrar mensaje en la barra de estado
     ui->statusbar->showMessage("Salario de "+nombre+" calculado",5000);
 }
 
+
+void Salarios::on_actionCalcular_triggered()
+{
+    calcular();
+}
+
+
+void Salarios::on_actionSalir_2_triggered()
+{
+    this->close();
+}
+
+
+void Salarios::on_actionGuardar_triggered()
+{
+    //Abrir cuadro de dialogo
+    QString nombreArchivo=QFileDialog::getSaveFileName(this,
+                                                       "Guardar calculos de salario",
+                                                       QDir::home().absolutePath()+"/salario.txt",
+                                                       "Archivos de texto (.txt)");
+    //Crear un objeto File
+    QFile archivo(nombreArchivo);
+    //Abrir para escritura
+    if(archivo.open(QFile::WriteOnly | QFile::Truncate)){
+        //crear un objeto stream de texto
+        QTextStream salida(&archivo);
+        //enviar los datos del resultado a la salida
+        salida<<ui->outCalculos->toPlainText();
+        //Mostrar mensajes en barra de estado
+        ui->statusbar->showMessage("Datos Guardados en: "+nombreArchivo,5000);
+        //cerrar el archivo
+        archivo.close();
+
+    }else{
+        //Mensaje de error
+        QMessageBox::warning(this,
+                             "Guardar Archivo",
+                             "No se puede acceder al archivo para guardar los datos");
+    }
+}
 

@@ -7,6 +7,7 @@
 #include <QMainWindow>
 #include <QDebug>
 #include <QMessageBox>
+#include <QFileDialog>
 
 
 QT_BEGIN_NAMESPACE
@@ -24,8 +25,18 @@ public:
 private slots:
     void on_btnCalcular_clicked();
 
+    void on_actionNuevo_triggered();
+
+    void on_actionCalcular_triggered();
+
+    void on_actionSalir_2_triggered();
+
+    void on_actionGuardar_triggered();
+
 private:
     Ui::Salarios *ui;
     Controlador *m_controlador;
+    void limpiar();
+    void calcular();
 };
 #endif // SALARIOS_H
