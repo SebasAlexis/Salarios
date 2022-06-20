@@ -3,12 +3,14 @@
 
 #include "obrero.h"
 #include "controlador.h"
+#include "acerca.h"
 
 #include <QMainWindow>
 #include <QDebug>
 #include <QMessageBox>
 #include <QFileDialog>
 
+#define VERSION "0.2"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Salarios; }
@@ -32,6 +34,8 @@ private slots:
     void on_actionSalir_2_triggered();
 
     void on_actionGuardar_triggered();
+
+    void on_actionAcerca_de_triggered();
 
 private:
     Ui::Salarios *ui;
