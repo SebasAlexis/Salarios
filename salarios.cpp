@@ -23,6 +23,7 @@ void Salarios::on_btnCalcular_clicked()
 
 void Salarios::on_actionNuevo_triggered()
 {
+
     //Limpiar widgets
     limpiar();
     //Limpiar el texto de los calculos

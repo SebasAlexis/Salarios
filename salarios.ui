@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>Salarios</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="recuros.qrc">
+    <normaloff>:/recursos/img/nomina-de-sueldos.png</normaloff>:/recursos/img/nomina-de-sueldos.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
@@ -200,6 +204,10 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="recuros.qrc">
+     <normaloff>:/recursos/img/archivo-nuevo.png</normaloff>:/recursos/img/archivo-nuevo.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Nuevo</string>
    </property>
@@ -208,6 +216,10 @@
    </property>
   </action>
   <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="recuros.qrc">
+     <normaloff>:/recursos/img/abrir-carpeta-con-documento.png</normaloff>:/recursos/img/abrir-carpeta-con-documento.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Abrir</string>
    </property>
@@ -216,11 +228,19 @@
    </property>
   </action>
   <action name="actionCalcular_2">
+   <property name="icon">
+    <iconset resource="recuros.qrc">
+     <normaloff>:/recursos/img/calculadora.png</normaloff>:/recursos/img/calculadora.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Calcular</string>
    </property>
   </action>
   <action name="actionSalir_2">
+   <property name="icon">
+    <iconset resource="recuros.qrc">
+     <normaloff>:/recursos/img/salida-de-emergencia.png</normaloff>:/recursos/img/salida-de-emergencia.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Salir</string>
    </property>
@@ -234,6 +254,10 @@
    </property>
   </action>
   <action name="actionGuardar">
+   <property name="icon">
+    <iconset resource="recuros.qrc">
+     <normaloff>:/recursos/img/disquete (1).png</normaloff>:/recursos/img/disquete (1).png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Guardar</string>
    </property>
@@ -242,6 +266,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="recuros.qrc"/>
+ </resources>
  <connections/>
 </ui>
