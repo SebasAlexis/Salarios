@@ -31,16 +31,21 @@ private slots:
 
     void on_actionCalcular_triggered();
 
-    void on_actionSalir_2_triggered();
+    void on_actionSalir_triggered();
 
     void on_actionGuardar_triggered();
 
     void on_actionAcerca_de_triggered();
+
+    void on_actionAbrir_triggered();
 
 private:
     Ui::Salarios *ui;
     Controlador *m_controlador;
     void limpiar();
     void calcular();
+    void guardarDatos();
+    void abrirTexto(QString);
+    void saveDatos();
 };
 #endif // SALARIOS_H

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>315</height>
+    <height>328</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -22,6 +22,11 @@
   <property name="windowIcon">
    <iconset resource="recuros.qrc">
     <normaloff>:/recursos/img/nomina-de-sueldos.png</normaloff>:/recursos/img/nomina-de-sueldos.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(11, 25, 61);
+color: rgb(255, 255, 255);
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -156,6 +161,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QPlainTextEdit" name="outCalculos">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(1, 63, 146);</string>
+         </property>
          <property name="readOnly">
           <bool>true</bool>
          </property>
@@ -189,9 +197,9 @@
     <addaction name="actionAbrir"/>
     <addaction name="actionGuardar"/>
     <addaction name="separator"/>
-    <addaction name="actionCalcular_2"/>
+    <addaction name="actionCalcular"/>
     <addaction name="separator"/>
-    <addaction name="actionSalir_2"/>
+    <addaction name="actionSalir"/>
    </widget>
    <widget class="QMenu" name="menuAyuda">
     <property name="title">
@@ -227,7 +235,7 @@
     <string>Ctrl+A</string>
    </property>
   </action>
-  <action name="actionCalcular_2">
+  <action name="actionCalcular">
    <property name="icon">
     <iconset resource="recuros.qrc">
      <normaloff>:/recursos/img/calculadora.png</normaloff>:/recursos/img/calculadora.png</iconset>
@@ -236,7 +244,7 @@
     <string>&amp;Calcular</string>
    </property>
   </action>
-  <action name="actionSalir_2">
+  <action name="actionSalir">
    <property name="icon">
     <iconset resource="recuros.qrc">
      <normaloff>:/recursos/img/salida-de-emergencia.png</normaloff>:/recursos/img/salida-de-emergencia.png</iconset>
